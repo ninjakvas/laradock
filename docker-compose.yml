@@ -1665,7 +1665,7 @@ services:
 
     nuxt:
       build:
-        context: ../client
+        context: ./nuxt
       volumes:
         - ../client:/app
       networks:
