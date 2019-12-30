@@ -319,6 +319,7 @@ services:
         - "${NGINX_HOST_HTTPS_PORT}:443"
       depends_on:
         - php-fpm
+        - nuxt
       networks:
         - frontend
         - backend
@@ -1662,3 +1663,11 @@ services:
         - ${DATA_PATH_HOST}/tomcat/logs:/usr/local/tomcat/logs
       # restart: always
 
+    nuxt:
+      build:
+        context: ../client
+      volumes:
+        - ../client:/app
+      networks:
+        - frontend
+        - backend
