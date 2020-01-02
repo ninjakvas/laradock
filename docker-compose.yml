@@ -1666,9 +1666,7 @@ services:
 
     nuxt:
       build:
-        context: ./nuxt
-      volumes:
-        - ../client:/app
+        context: ../client
       networks:
         - frontend
         - backend
